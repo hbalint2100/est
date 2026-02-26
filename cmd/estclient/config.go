@@ -34,7 +34,7 @@ import (
 	"time"
 
 	"github.com/ThalesIgnite/crypto11"
-	"github.com/arlotito/est"
+	"github.com/hbalint2100/est"
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/globalsign/pemfile"
