@@ -40,8 +40,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/arlotito/est"
-	"github.com/arlotito/est/internal/mockca"
+	"github.com/hbalint2100/est"
+	"github.com/hbalint2100/est/internal/mockca"
 
 	"github.com/globalsign/pemfile"
 )

@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/arlotito/est"
+	"github.com/hbalint2100/est"
 )
 
 func TestCSRAttrsMarshal(t *testing.T) {
