@@ -44,10 +44,10 @@ import (
 	"github.com/google/go-tpm/tpm2"
 	"go.mozilla.org/pkcs7"
 
-	"github.com/arlotito/est"
-	"github.com/arlotito/est/internal/basiclogger"
-	"github.com/arlotito/est/internal/mockca"
-	"github.com/arlotito/est/internal/tpm"
+	"github.com/hbalint2100/est"
+	"github.com/hbalint2100/est/internal/basiclogger"
+	"github.com/hbalint2100/est/internal/mockca"
+	"github.com/hbalint2100/est/internal/tpm"
 )
 
 // Test constants.

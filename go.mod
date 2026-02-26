@@ -1,4 +1,4 @@
-module github.com/arlotito/est
+module github.com/hbalint2100/est
 
 go 1.13
 
