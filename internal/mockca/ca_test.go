@@ -35,7 +35,7 @@ import (
 	"github.com/arlotito/est"
 	"github.com/arlotito/est/internal/mockca"
 	"github.com/arlotito/est/internal/tpm"
-	"github.com/google/go-tpm/tpm2"
+	"github.com/google/go-tpm/legacy/tpm2"
 	"go.mozilla.org/pkcs7"
 )
 

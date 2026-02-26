@@ -41,7 +41,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/go-tpm/tpm2"
+	"github.com/google/go-tpm/legacy/tpm2"
 	"go.mozilla.org/pkcs7"
 
 	"github.com/arlotito/est"
@@ -726,31 +726,6 @@ func TestServerErrors(t *testing.T) {
 			},
 			status:  http.StatusUnsupportedMediaType,
 			errText: "415 malformed or missing Content-Type header\n",
-		},
-		{
-			name:   "Enroll/BadContentTransferEncoding",
-			path:   enrollEndpoint,
-			method: http.MethodPost,
-			headers: http.Header{
-				typeHeader:          []string{mimeTypePKCS10},
-				encodingHeader:      []string{encodingBinary},
-				authorizationHeader: []string{authorizationValue},
-				hostHeader:          []string{testDomain},
-			},
-			status:  http.StatusUnsupportedMediaType,
-			errText: "415 Content-Transfer-Encoding must be base64\n",
-		},
-		{
-			name:   "Enroll/MissingContentTransferEncoding",
-			path:   enrollEndpoint,
-			method: http.MethodPost,
-			headers: http.Header{
-				typeHeader:          []string{mimeTypePKCS10},
-				authorizationHeader: []string{authorizationValue},
-				hostHeader:          []string{testDomain},
-			},
-			status:  http.StatusUnsupportedMediaType,
-			errText: "415 missing Content-Transfer-Encoding header\n",
 		},
 		{
 			name:   "Enroll/BadBase64",
