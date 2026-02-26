@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hbalint2100/est"
+	"github.com/arlotito/est"
 )
 
 // Logger is a basic logger implementing est.Logger.

@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hbalint2100/est/internal/basiclogger"
+	"github.com/arlotito/est/internal/basiclogger"
 )
 
 func TestLogger(t *testing.T) {

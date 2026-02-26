@@ -35,9 +35,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/hbalint2100/est"
-	"github.com/hbalint2100/est/internal/basiclogger"
-	"github.com/hbalint2100/est/internal/mockca"
+	"github.com/arlotito/est"
+	"github.com/arlotito/est/internal/basiclogger"
+	"github.com/arlotito/est/internal/mockca"
 	"github.com/globalsign/pemfile"
 )
 
@@ -250,7 +250,7 @@ func main() {
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGHUP)
 
-	logger.Infof("Starting EST server FOR NON-PRODUCTION USE ONLY - https://github.com/hbalint2100/est")
+	logger.Infof("Starting EST server FOR NON-PRODUCTION USE ONLY - https://github.com/arlotito/est")
 
 	go s.ListenAndServeTLS("", "")
 
