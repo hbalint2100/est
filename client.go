@@ -101,7 +101,7 @@ type Client struct {
 // Client constants.
 const (
 	estVersion = "v1.0.6"
-	userAgent  = "GlobalSign EST Client " + estVersion + " github.com/arlotito/est"
+	userAgent  = "GlobalSign EST Client " + estVersion + " github.com/hbalint2100/est"
 )
 
 // CACerts requests a copy of the current CA certificates.
@@ -254,14 +254,6 @@ func (c *Client) ServerKeyGen(ctx context.Context, r *x509.CertificateRequest) (
 		// Return with error if there are more parts than we expect.
 		if i > numParts {
 			return nil, nil, fmt.Errorf("more than %d parts in HTTP response", numParts)
-		}
-
-		// Check content-transfer-encoding is as expected, and read the part
-		// body.
-		if ce := part.Header.Get(transferEncodingHeader); ce == "" {
-			return nil, nil, fmt.Errorf("missing %s header", transferEncodingHeader)
-		} else if strings.ToUpper(ce) != strings.ToUpper(encodingTypeBase64) {
-			return nil, nil, fmt.Errorf("unexpected %s: %s", transferEncodingHeader, ce)
 		}
 
 		// Process based on the part's content-type. Per RFC7030 4.4.2, if
